@@ -5,23 +5,24 @@ package com.company;
 //наибольшее значение из этих двух переменных.
 
 public class Task1 {
-    static int a = 10;
-    static int b = 30;
 
     public static void main(String[] args) {
-        print();
+        int a = 5;
+        int b = 3;
+        doLogic(a,b);
     }
 
-    public static int sumAB() {
+    public static int sum(int a, int b) {
         return a + b;
     }
 
-    public static int maxValue() {
+    public static int maxValue(int a, int b) {
         return Math.max(a, b);
     }
 
-    public static void print() {
-        System.out.println(sumAB());
-        System.out.println(maxValue());
+    public static void doLogic(int a, int b) {
+        int sumAB = sum(a, b);
+        int maxAB = maxValue(a, b);
+        Util.print("sumAB = " + sumAB + " , maxAB= " + maxAB);
     }
 }

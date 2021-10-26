@@ -5,11 +5,12 @@ package com.company;
 //класса
 
 public class Task2 {
-    int s;
-    int d;
+    private int s;
+    private int d;
 
-    public static void main(String[] args) {
-
+    public Task2() {
+        this.s = 0;
+        this.d = 0;
     }
 
     public Task2(int s, int d) {
