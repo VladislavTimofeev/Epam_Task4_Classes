@@ -3,8 +3,8 @@ package com.company;
 public class DecimalCounter {
 
     private int counter;
-    private int minValue;
-    private int maxValue;
+    private final int minValue;
+    private final int maxValue;
 
 
     public DecimalCounter() {
@@ -13,8 +13,8 @@ public class DecimalCounter {
         this.maxValue = 100;
     }
 
-    public DecimalCounter(int counter, int minValue, int maxValue) {
-        this.counter = counter;
+    public DecimalCounter(int minValue, int maxValue) {
+        this.counter = minValue;
         this.minValue = minValue;
         this.maxValue = maxValue;
     }
