@@ -13,24 +13,24 @@ public class EnterBooks {
         books.addNewBook(1, book2);
         books.addNewBook(2, book3);
 
-//        Util.print(books.getBookByIndex(0).toString());
-//
-//        Book[] booksByAuthor = books.getBooksByAuthor("J.K.Rowling");
-//
-//        for (Book book1 : booksByAuthor){
-//            Util.print(book1.toString());
-//        }
+        Util.print(books.getBookByIndex(0).toString());
 
-//        Book[] booksByPublishingHouse = books.getBooksByPublishingHouse("jarvis");
-//
-//        for (Book stellMan : booksByPublishingHouse){
-//            Util.print(stellMan.toString());
-//        }
+        Book[] booksByAuthor = books.getBooksByAuthor("J.K.Rowling");
 
-        Book[] booksByYear = books.getBooksByYearOfPublishing(2012);
+        for (Book book1 : booksByAuthor){
+            Util.print(book1.toString());
+        }
+
+        Book[] booksByPublishingHouse = books.getBooksByPublishingHouse("jarvis");
+
+        for (Book stellMan : booksByPublishingHouse){
+            Util.print(stellMan.toString());
+        }
+
+        Book[] booksByYear = books.getBooksByYearOfPublishing(2010);
 
         for (Book bookYear : booksByYear) {
-            Util.print(booksByYear.toString());
+            Util.print(bookYear.toString());
         }
 
     }

@@ -6,7 +6,7 @@ public class Customer {
     private String surname;
     private String name;
     private String patronymic;
-    private String adress;
+    private String address;
     private int numberOfCard;
     private int bankAccount;
 
@@ -16,20 +16,20 @@ public class Customer {
         this.surname = "";
         this.name = "";
         this.patronymic = "";
-        this.adress = "";
+        this.address = "";
         this.numberOfCard = 0;
         this.bankAccount = 0;
 
     }
 
     public Customer(int id, String surname, String name, String patronymic,
-                    String adress, int numberOfCard, int bankAccount) {
+                    String address, int numberOfCard, int bankAccount) {
 
         this.id = id;
         this.surname = surname;
         this.name = name;
         this.patronymic = patronymic;
-        this.adress = adress;
+        this.address = address;
         this.numberOfCard = numberOfCard;
         this.bankAccount = bankAccount;
 
@@ -67,12 +67,12 @@ public class Customer {
         this.patronymic = patronymic;
     }
 
-    public String getAdress() {
-        return adress;
+    public String getAddress() {
+        return address;
     }
 
-    public void setAdress(String adress) {
-        this.adress = adress;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public int getNumberOfCard() {
@@ -98,7 +98,7 @@ public class Customer {
                 ", surname='" + surname + '\'' +
                 ", name='" + name + '\'' +
                 ", patronymic='" + patronymic + '\'' +
-                ", adress='" + adress + '\'' +
+                ", adress='" + address + '\'' +
                 ", numberOfCard=" + numberOfCard +
                 ", bankAccount=" + bankAccount +
                 '}';
