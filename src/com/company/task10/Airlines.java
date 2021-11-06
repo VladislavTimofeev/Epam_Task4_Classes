@@ -47,14 +47,9 @@ public class Airlines {
             }
         }
 
-        Airline[] finalAirlines = new Airline[index];
-        for (int i = 0; i < index; i++) {
-            if (filteredAirlinesByDestination[i] != null) {
-                finalAirlines[i] = filteredAirlinesByDestination[i];
-            }
-        }
+        Airline[] array = createArrayWithoutNullElements(index,filteredAirlinesByDestination);
 
-        return finalAirlines;
+        return array;
     }
 
     public Airline[] getAirlinesByDay(String daysOfWeek) {
@@ -68,14 +63,9 @@ public class Airlines {
             }
         }
 
-        Airline[] finallAirlines = new Airline[index];
-        for (int i = 0; i < index; i++) {
-            if (filteredAirlinesByDay[i] != null) {
-                finallAirlines[i] = filteredAirlinesByDay[i];
-            }
-        }
+        Airline[] array = createArrayWithoutNullElements(index,filteredAirlinesByDay);
 
-        return finallAirlines;
+        return array;
     }
 
     public Airline[] getAirlinesByDayAndTime(String daysOfWeek, double departureTime) {
@@ -89,13 +79,18 @@ public class Airlines {
             }
         }
 
+        Airline[] arrayWithoutNull = createArrayWithoutNullElements(index,filteredAirlinesByDayTime);
+        return arrayWithoutNull;
+    }
+
+    private Airline[] createArrayWithoutNullElements(int index,Airline[] array) {
+
         Airline[] finalAirlines = new Airline[index];
         for (int i = 0; i < index; i++) {
-            if (filteredAirlinesByDayTime[i] != null) {
-                finalAirlines[i] = filteredAirlinesByDayTime[i];
+            if (array[i] != null) {
+                finalAirlines[i] = array[i];
             }
         }
-
         return finalAirlines;
     }
 }
